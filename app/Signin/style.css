@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+.signin-container {
+  background-image: url(../../public/images1/signin.jpg);
+  min-height: 100vh;
+  width: 100%;
+  max-height: max-content;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.786);
+    opacity: 0.9;
+  }
+}
+.signin-container form {
+  z-index: 1;
+  margin-top: 50px;
+  height: 500px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.222);
+  border-radius: 20px;
+  padding: 40px;
+  & h1 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2.3rem;
+  }
+}
+form .input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 40px;
+}
+.input-box .input-field {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 25px;
+  width: 100%;
+}
+.input-field i {
+  color: #fff;
+  font-size: 22px;
+}
+.input-field input {
+  width: 70%;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  cursor: pointer;
+  &::placeholder {
+    color: #fff;
+    font-size: 18px;
+  }
+}
+input[type="email"],
+[type="password"] {
+  color: #fff;
+  font-size: 18px;
+}
+form .platforms {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 20px;
+  height: max-content;
+}
+.platforms .fb-platform a {
+  text-decoration: none;
+  background: #3361bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 5px;
+  & i {
+    font-size: 23px;
+    color: #fff;
+  }
+  span {
+    font-size: 14px;
+    color: #fff;
+  }
+}
+.platforms .gog-platform a {
+  text-decoration: none;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 5px;
+  & i {
+    font-size: 19px;
+    color: red;
+  }
+  span {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+  }
+}
+form .signbtn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  & button {
+    width: 100px;
+    height: 35px;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    &:hover {
+      box-shadow: 0 0 0.6rem #fff;
+    }
+  }
+}
+@media screen and (max-width: 620px) {
+  .signin-container {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 510px) {
+  form .platforms {
+    flex-direction: column;
+  }
+  form .signbtn-div {
+    margin-top: 40px;
+  }
+  .input-field input {
+    width: 90%;
+  }
+  .input-box .input-field{
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 400px){
+  .signin-container form {
+    padding: 20px;
+    & h1 {
+      font-size: 2rem;
+    }
+  }
+  form .signbtn-div {
+    margin-top: 60px;
+  }
+}
